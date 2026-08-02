@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://b82idbqasiki8"]
+
+[ext_resource type="Texture2D" uid="uid://b22tl5gob3aej" path="res://Asserts/19598325.jpg" id="1_d1td2"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_nptdn"]
+radius = 47.0
+height = 146.0
+
+[node name="SpaceShip" type="CharacterBody2D" unique_id=173941008]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=433748702]
+position = Vector2(7.1525574e-07, 5.0000005)
+scale = Vector2(0.040590607, 0.03044281)
+texture = ExtResource("1_d1td2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1190805758]
+position = Vector2(0, 3)
+shape = SubResource("CapsuleShape2D_nptdn")

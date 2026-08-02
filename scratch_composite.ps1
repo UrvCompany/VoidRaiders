@@ -1,0 +1,10 @@
+Add-Type -AssemblyName System.Drawing
+$fg = [System.Drawing.Bitmap]::FromFile("C:\Users\Konstantin\Documents\new-detective\Asserts\19598325_transparent.png")
+$out = New-Object System.Drawing.Bitmap($fg.Width, $fg.Height)
+$g = [System.Drawing.Graphics]::FromImage($out)
+$g.Clear([System.Drawing.Color]::FromArgb(30,120,200))
+$g.DrawImage($fg, 0, 0)
+$g.Dispose()
+$out.Save("C:\Users\Konstantin\Documents\new-detective\Asserts\19598325_composite_check.png", [System.Drawing.Imaging.ImageFormat]::Png)
+$fg.Dispose()
+$out.Dispose()
