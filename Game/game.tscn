@@ -18,13 +18,14 @@ region_enabled = true
 region_rect = Rect2(0, 0, 1400, 700)
 
 [node name="Wall" type="StaticBody2D" parent="." unique_id=715523359]
+position = Vector2(-15, 1)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Wall" unique_id=670672044]
 position = Vector2(0, 350)
 shape = SubResource("RectangleShape2D_1r4le")
 
 [node name="Wall2" type="StaticBody2D" parent="." unique_id=1288363061]
-position = Vector2(1414, 0)
+position = Vector2(1415, 0)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Wall2" unique_id=330398217]
 position = Vector2(0, 350)

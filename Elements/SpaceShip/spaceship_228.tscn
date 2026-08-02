@@ -10,6 +10,7 @@ height = 519.99994
 
 [node name="Spaceship_228" type="CharacterBody2D" unique_id=1587435101]
 rotation = 0.0060248673
+collision_layer = 2
 script = ExtResource("1_cid43")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1308124426]

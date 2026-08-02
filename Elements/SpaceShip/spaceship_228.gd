@@ -19,3 +19,6 @@ func shot():
 	var rocket = ROCKET_SCENE.instantiate()
 	rocket.global_position = global_position + Vector2(0, -95)
 	add_child(rocket)
+	
+func destroy():
+	print("samoubivsya")

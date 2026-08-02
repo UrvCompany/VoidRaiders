@@ -38,6 +38,8 @@ size = Vector2(18.5, 7.5)
 [node name="Fireball" type="CharacterBody2D" unique_id=756356069]
 top_level = true
 rotation = -1.5693007
+collision_layer = 0
+collision_mask = 6
 script = ExtResource("1_hx1t1")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1025786804]
@@ -48,3 +50,8 @@ frame_progress = 0.8956678
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1920770379]
 position = Vector2(0, -1)
 shape = SubResource("RectangleShape2D_7bm3c")
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="." unique_id=652867366]
+rect = Rect2(-15.176859, -7.6695237, 26.504175, 12.5710745)
+
+[connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]
