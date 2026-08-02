@@ -1,47 +1,32 @@
 [gd_scene format=3 uid="uid://jo06pecjflkh"]
 
-[ext_resource type="Script" uid="uid://b1nd6ketnw6mn" path="res://Game/game.gd" id="1_4m6pw"]
-[ext_resource type="Texture2D" uid="uid://dpbldndaj7ceu" path="res://Assets/aRTU1s.png" id="2_kpn0h"]
-[ext_resource type="PackedScene" uid="uid://br0achrustouv" path="res://Elements/Enemy_Group/enemy_group.tscn" id="3_jig0w"]
-[ext_resource type="PackedScene" uid="uid://diofyowib0nr" path="res://UI/HUD/hud.tscn" id="4_tsud6"]
-[ext_resource type="AudioStream" path="res://Assets/Sounds/vazelinovoe-drislo.mp3" id="5_pu6nr"]
-[ext_resource type="PackedScene" uid="uid://jo06pecjflkh" path="res://Elements/SpaceShip/spaceship_228.tscn" id="6_kt3es"]
+[ext_resource type="Script" uid="uid://c5vv0tbbuj71k" path="res://Elements/SpaceShip/spaceship_228.gd" id="1_cid43"]
+[ext_resource type="Texture2D" uid="uid://kh56i0dkil37" path="res://Assets/Spaceship_12.png" id="1_e8q67"]
+[ext_resource type="PackedScene" uid="uid://dw0wtgx8wygli" path="res://Elements/Misc_objects/Fireball.tscn" id="3_bqt0i"]
+[ext_resource type="AudioStream" uid="uid://d1q8jhcwjpyom" path="res://Assets/Sounds/ogon-po-khutoru-paau-edited.mp3" id="4_2ph6b"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_1r4le"]
-size = Vector2(30, 700)
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_7bm3c"]
+radius = 259.99997
+height = 519.99994
 
-[node name="Game" type="Node2D" unique_id=1236575319]
-script = ExtResource("1_4m6pw")
+[node name="Spaceship_228" type="CharacterBody2D" unique_id=1587435101]
+rotation = 0.0060248673
+collision_layer = 2
+script = ExtResource("1_cid43")
 
-[node name="background" type="Sprite2D" parent="." unique_id=1662516718]
-texture_filter = 3
-texture_repeat = 2
-position = Vector2(700, 350)
-texture = ExtResource("2_kpn0h")
-region_enabled = true
-region_rect = Rect2(0, 0, 1400, 700)
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1308124426]
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("1_e8q67")
 
-[node name="Wall" type="StaticBody2D" parent="." unique_id=715523359]
-position = Vector2(-15, 1)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1490568861]
+position = Vector2(1, 2)
+scale = Vector2(0.3, 0.3)
+shape = SubResource("CapsuleShape2D_7bm3c")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Wall" unique_id=670672044]
-position = Vector2(0, 350)
-shape = SubResource("RectangleShape2D_1r4le")
+[node name="Fireball" parent="." unique_id=756356069 instance=ExtResource("3_bqt0i")]
+position = Vector2(2, -97)
+scale = Vector2(1.5, 1.5)
 
-[node name="Wall2" type="StaticBody2D" parent="." unique_id=1288363061]
-position = Vector2(1415, 0)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Wall2" unique_id=330398217]
-position = Vector2(0, 350)
-shape = SubResource("RectangleShape2D_1r4le")
-
-[node name="Spaceship 228" parent="." unique_id=1587435101 instance=ExtResource("6_kt3es")]
-position = Vector2(708, 392.99997)
-rotation = -0.0057841334
-
-[node name="EnemyGroup" parent="." unique_id=906959997 instance=ExtResource("3_jig0w")]
-
-[node name="HUD" parent="." unique_id=1249107665 instance=ExtResource("4_tsud6")]
-
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=488968242]
-stream = ExtResource("5_pu6nr")
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=575957065]
+stream = ExtResource("4_2ph6b")
+volume_db = 10.0
