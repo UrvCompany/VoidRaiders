@@ -11,6 +11,9 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1r4le"]
 size = Vector2(30, 700)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7bm3c"]
+size = Vector2(1400, 21)
+
 [node name="Game" type="Node2D" unique_id=1236575319]
 script = ExtResource("1_fwxkx")
 
@@ -29,6 +32,10 @@ position = Vector2(-15, 1)
 position = Vector2(0, 350)
 shape = SubResource("RectangleShape2D_1r4le")
 
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Wall" unique_id=960729982]
+position = Vector2(715, 709.5)
+shape = SubResource("RectangleShape2D_7bm3c")
+
 [node name="Wall2" type="StaticBody2D" parent="." unique_id=1288363061]
 position = Vector2(1415, 0)
 
@@ -46,7 +53,8 @@ rotation = -0.0057841334
 
 [node name="GameOverSound" type="AudioStreamPlayer" parent="." unique_id=488968242]
 stream = ExtResource("6_qmv3x")
+volume_db = 5.0
 
 [node name="VictorySound" type="AudioStreamPlayer" parent="." unique_id=344537882]
 stream = ExtResource("7_oomkl")
-volume_db = -20.0
+volume_db = -15.0

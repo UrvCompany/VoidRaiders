@@ -3,6 +3,8 @@
 [ext_resource type="Script" uid="uid://be4326dlk7rxi" path="res://UI/HUD/hud.gd" id="1_ing8j"]
 [ext_resource type="PackedScene" uid="uid://doiygxify73s0" path="res://UI/Healthbar/healthbar.tscn" id="2_ing8j"]
 
+[sub_resource type="LabelSettings" id="LabelSettings_5sghd"]
+
 [node name="HUD" type="CanvasLayer" unique_id=1249107665]
 script = ExtResource("1_ing8j")
 
@@ -29,6 +31,7 @@ offset_transform_enabled = true
 offset_transform_scale = Vector2(2, 2)
 text = "0
 "
+label_settings = SubResource("LabelSettings_5sghd")
 
 [node name="Control" type="Control" parent="MarginContainer/VBoxContainer/HBoxContainer" unique_id=1751188757]
 layout_mode = 2

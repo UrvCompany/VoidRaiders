@@ -37,11 +37,11 @@ animations = [{
 }],
 "loop": 1,
 "name": &"default",
-"speed": 2.0
+"speed": 8.0
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_7bm3c"]
-radius = 14.670454
+radius = 19.026299
 
 [node name="CharacterBody2D" type="CharacterBody2D" unique_id=2084012987 groups=["enemy"]]
 position = Vector2(0, 1)
@@ -54,11 +54,10 @@ script = ExtResource("1_5sghd")
 scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_7bm3c")
 autoplay = "default"
-frame = 2
-frame_progress = 0.533981
+frame_progress = 0.63145643
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2069133873]
-position = Vector2(-2, 6)
+position = Vector2(-5.3333335, 0)
 scale = Vector2(2, 2)
 shape = SubResource("CircleShape2D_7bm3c")
 

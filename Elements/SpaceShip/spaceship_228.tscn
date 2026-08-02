@@ -5,13 +5,15 @@
 [ext_resource type="PackedScene" uid="uid://dw0wtgx8wygli" path="res://Elements/Misc_objects/Fireball.tscn" id="3_bqt0i"]
 [ext_resource type="AudioStream" uid="uid://d1q8jhcwjpyom" path="res://Assets/Sounds/ogon-po-khutoru-paau-edited.mp3" id="4_2ph6b"]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_7bm3c"]
-radius = 259.99997
-height = 519.99994
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_us5y5"]
+radius = 230.05598
+height = 460.11197
 
 [node name="Spaceship_228" type="CharacterBody2D" unique_id=1587435101]
 rotation = 0.0060248673
+disable_mode = 2
 collision_layer = 2
+collision_mask = 5
 script = ExtResource("1_cid43")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1308124426]
@@ -19,9 +21,9 @@ scale = Vector2(0.3, 0.3)
 texture = ExtResource("1_e8q67")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1490568861]
-position = Vector2(1, 2)
+position = Vector2(-0.0060247183, -0.99998164)
 scale = Vector2(0.3, 0.3)
-shape = SubResource("CapsuleShape2D_7bm3c")
+shape = SubResource("CapsuleShape2D_us5y5")
 
 [node name="Fireball" parent="." unique_id=756356069 instance=ExtResource("3_bqt0i")]
 position = Vector2(2, -97)
@@ -29,4 +31,4 @@ scale = Vector2(1.5, 1.5)
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=575957065]
 stream = ExtResource("4_2ph6b")
-volume_db = 10.0
+volume_db = 15.0
