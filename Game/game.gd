@@ -3,17 +3,21 @@ extends Node2D
 
 const GAME_OVER_SCENE = preload("res://UI/GameOver/game_over.tscn")
 
-func gameover(lives): 
-	print("CHECK GAME OVER")
-	check_game_over()
-
 func _ready():
-	Events.lives_changed.connect(gameover)
-	Events.enemy_died.connect(check_game_over)
+	Events.lives_changed.connect(_on_lives_changed)
+	Events.enemy_died.connect(_on_enemy_died)
 
-func check_game_over():	
+func _on_lives_changed(lives: int):
+	if lives <= 0:
+		show_game_over()
+
+func _on_enemy_died():
 	var enemies = get_tree().get_nodes_in_group('enemy')
-	if Globals.lives <= 0 or enemies.size() <= 1:
-		shoot_sound.play()
-		add_child(GAME_OVER_SCENE.instantiate())
+	print(enemies.size())
+	if enemies.size() <= 1:
+		show_game_over() # TODO: заменить на экран победы, когда появится
+
+func show_game_over():
+	shoot_sound.play()
+	add_child(GAME_OVER_SCENE.instantiate())
 		
