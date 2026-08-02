@@ -22,3 +22,8 @@ func shot():
 	
 func destroy():
 	print("samoubivsya")
+
+
+func take_damage():
+	print('Minus EBalo')
+	
