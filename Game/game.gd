@@ -15,7 +15,7 @@ func _on_enemy_died():
 	var enemies = get_tree().get_nodes_in_group('enemy')
 	print(enemies.size())
 	if enemies.size() <= 1:
-		show_game_over() # TODO: заменить на экран победы, когда появится
+		show_game_over() # TODO: заменить на экран, когда появится
 
 func show_game_over():
 	shoot_sound.play()
