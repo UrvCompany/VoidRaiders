@@ -1,5 +1,5 @@
 extends CharacterBody2D
-
+@onready var shoot_sound = $AudioStreamPlayer2D
 const ROCKET_SCENE = preload("res://Elements/Misc_objects/Fireball.tscn")
 
 const SPEED = 300.0
@@ -19,6 +19,7 @@ func shot():
 	var rocket = ROCKET_SCENE.instantiate()
 	rocket.global_position = global_position + Vector2(0, -95)
 	add_child(rocket)
+	shoot_sound.play()
 	
 func destroy():
 	print("samoubivsya")
@@ -26,4 +27,5 @@ func destroy():
 
 func take_damage():
 	Globals.change_lives(-1)
+	
 	

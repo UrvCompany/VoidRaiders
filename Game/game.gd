@@ -1,6 +1,7 @@
 extends Node2D
 
 const GAME_OVER_SCENE = preload("res://UI/GameOver/game_over.tscn")
+@onready var end_sound = $AudioStreamPlayer
 
 func gameover(lives): 
 	print("CHECK GAME OVER")
@@ -13,5 +14,7 @@ func _ready():
 func check_game_over():	
 	var enemies = get_tree().get_nodes_in_group('enemy')
 	if Globals.lives <= 0 or enemies.size() <= 1:
+		end_sound.play()
 		add_child(GAME_OVER_SCENE.instantiate())
+		
 		

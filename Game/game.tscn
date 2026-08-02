@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://jo06pecjflkh" path="res://Elements/SpaceShip/spaceship_228.tscn" id="2_7raqb"]
 [ext_resource type="PackedScene" uid="uid://br0achrustouv" path="res://Elements/Enemy_Group/enemy_group.tscn" id="3_7raqb"]
 [ext_resource type="PackedScene" uid="uid://diofyowib0nr" path="res://UI/HUD/hud.tscn" id="4_jcm6v"]
+[ext_resource type="AudioStream" uid="uid://bwg866x8gy02y" path="res://Assets/Sounds/vazelinovoe-drislo.mp3" id="6_qmv3x"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1r4le"]
 size = Vector2(30, 700)
@@ -41,3 +42,6 @@ rotation = -0.0057841334
 [node name="EnemyGroup" parent="." unique_id=906959997 instance=ExtResource("3_7raqb")]
 
 [node name="HUD" parent="." unique_id=1249107665 instance=ExtResource("4_jcm6v")]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=488968242]
+stream = ExtResource("6_qmv3x")
