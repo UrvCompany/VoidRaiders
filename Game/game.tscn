@@ -45,4 +45,3 @@ rotation = -0.0057841334
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=488968242]
 stream = ExtResource("6_qmv3x")
-volume_db = 10.0

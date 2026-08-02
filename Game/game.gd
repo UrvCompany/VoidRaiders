@@ -20,4 +20,3 @@ func _on_enemy_died():
 func show_game_over():
 	shoot_sound.play()
 	add_child(GAME_OVER_SCENE.instantiate())
-		
