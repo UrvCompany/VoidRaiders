@@ -1,0 +1,47 @@
+[gd_scene format=3 uid="uid://br0achrustouv"]
+
+[ext_resource type="Script" uid="uid://dwgv7hc3ufr5i" path="res://Elements/Enemy_Group/enemy_group.gd" id="1_yetic"]
+[ext_resource type="PackedScene" uid="uid://xq5kw3h373xs" path="res://Elements/Chars/Monster.tscn" id="2_0lypr"]
+
+[node name="EnemyGroup" type="Node2D" unique_id=906959997 groups=["enemy_group"]]
+script = ExtResource("1_yetic")
+
+[node name="Enemy" parent="." unique_id=2084012987 instance=ExtResource("2_0lypr")]
+position = Vector2(328, 80)
+
+[node name="Enemy2" parent="." unique_id=1491046045 instance=ExtResource("2_0lypr")]
+position = Vector2(528, 80)
+
+[node name="Enemy3" parent="." unique_id=1253636052 instance=ExtResource("2_0lypr")]
+position = Vector2(728, 80)
+
+[node name="Enemy4" parent="." unique_id=593514979 instance=ExtResource("2_0lypr")]
+position = Vector2(928, 80)
+
+[node name="Enemy5" parent="." unique_id=86026492 instance=ExtResource("2_0lypr")]
+position = Vector2(1128, 80)
+
+[node name="Enemy6" parent="." unique_id=1956715387 instance=ExtResource("2_0lypr")]
+position = Vector2(422, 180)
+
+[node name="Enemy7" parent="." unique_id=19789538 instance=ExtResource("2_0lypr")]
+position = Vector2(622, 180)
+
+[node name="Enemy8" parent="." unique_id=66616208 instance=ExtResource("2_0lypr")]
+position = Vector2(822, 180)
+
+[node name="Enemy9" parent="." unique_id=1108844668 instance=ExtResource("2_0lypr")]
+position = Vector2(1022, 180)
+
+[node name="Enemy10" parent="." unique_id=350314224 instance=ExtResource("2_0lypr")]
+position = Vector2(1222, 180)
+
+[node name="block_timer" type="Timer" parent="." unique_id=1315994858]
+wait_time = 0.3
+one_shot = true
+
+[node name="shoot_timer" type="Timer" parent="." unique_id=757282879]
+wait_time = 2.0
+autostart = true
+
+[connection signal="timeout" from="shoot_timer" to="." method="_on_shoot_timer_timeout"]
