@@ -10,9 +10,9 @@ func _physics_process(delta):
 
 func destroy():
 	Globals.change_points(1)
-	Events.enemy_died.emit()
 	queue_free()
-
+	Events.enemy_died.emit()
+	
 func shot():
 	var bullet = BULLET_SCENE.instantiate()
 	bullet.global_position += global_position + Vector2(0, 20.0)

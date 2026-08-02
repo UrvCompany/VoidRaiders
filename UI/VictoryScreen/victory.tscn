@@ -1,0 +1,52 @@
+[gd_scene format=3 uid="uid://b055cjob28waf"]
+
+[ext_resource type="FontFile" uid="uid://briag55nx7nni" path="res://UI/Fonts/SFProText-Light.ttf" id="1_4g8m6"]
+[ext_resource type="Script" uid="uid://imbtlwosxs8i" path="res://UI/VictoryScreen/victory.gd" id="1_7g4h6"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_brsih"]
+font = ExtResource("1_4g8m6")
+font_size = 120
+
+[node name="CanvasLayer_victory" type="CanvasLayer" unique_id=1881604624]
+script = ExtResource("1_7g4h6")
+
+[node name="ColorRect_background" type="ColorRect" parent="." unique_id=222116951]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.023529412, 0.023529412, 0.023529412, 0.827451)
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1459005051]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 40
+theme_override_constants/margin_right = 40
+theme_override_constants/margin_bottom = 80
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=1659555799]
+layout_mode = 2
+alignment = 1
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer" unique_id=2036292445]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_4g8m6")
+theme_override_font_sizes/font_size = 100
+text = "
+ПЕРЕМОГА!
+"
+label_settings = SubResource("LabelSettings_brsih")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="RestartButton" type="Button" parent="MarginContainer/VBoxContainer" unique_id=394191708]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_4g8m6")
+theme_override_font_sizes/font_size = 100
+text = "Ещё разочек"
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/RestartButton" to="." method="_on_restart_button_pressed"]
