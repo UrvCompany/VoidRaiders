@@ -1,0 +1,50 @@
+[gd_scene format=3 uid="uid://dw0wtgx8wygli"]
+
+[ext_resource type="Script" uid="uid://i2kxju7p1dxc" path="res://Elements/Misc_objects/fireball.gd" id="1_hx1t1"]
+[ext_resource type="Texture2D" uid="uid://drjbrrk6pt5ru" path="res://Asserts/Fireball_Sprite_Sheet.png" id="2_msjwa"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6egcq"]
+atlas = ExtResource("2_msjwa")
+region = Rect2(96, 0, 32, 35)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xcryi"]
+atlas = ExtResource("2_msjwa")
+region = Rect2(32, 0, 32, 35)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_opoal"]
+atlas = ExtResource("2_msjwa")
+region = Rect2(64, 0, 32, 35)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_7bm3c"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6egcq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xcryi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_opoal")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 8.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7bm3c"]
+size = Vector2(18.5, 7.5)
+
+[node name="Fireball" type="CharacterBody2D" unique_id=756356069]
+top_level = true
+rotation = -1.5693007
+script = ExtResource("1_hx1t1")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1025786804]
+sprite_frames = SubResource("SpriteFrames_7bm3c")
+autoplay = "default"
+frame_progress = 0.8956678
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1920770379]
+position = Vector2(0, -1)
+shape = SubResource("RectangleShape2D_7bm3c")

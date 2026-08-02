@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://jo06pecjflkh"]
+
+[ext_resource type="Script" uid="uid://c5vv0tbbuj71k" path="res://Elements/SpaceShip/spaceship_228.gd" id="1_cid43"]
+[ext_resource type="Texture2D" uid="uid://kh56i0dkil37" path="res://Asserts/Spaceship_12.png" id="1_e8q67"]
+[ext_resource type="PackedScene" uid="uid://dw0wtgx8wygli" path="res://Elements/Misc_objects/Fireball.tscn" id="3_bqt0i"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_7bm3c"]
+radius = 259.99997
+height = 519.99994
+
+[node name="Spaceship_228" type="CharacterBody2D" unique_id=1587435101]
+rotation = 0.0060248673
+script = ExtResource("1_cid43")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1308124426]
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("1_e8q67")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1490568861]
+position = Vector2(1, 2)
+scale = Vector2(0.3, 0.3)
+shape = SubResource("CapsuleShape2D_7bm3c")
+
+[node name="Fireball" parent="." unique_id=756356069 instance=ExtResource("3_bqt0i")]
+position = Vector2(2, -97)
+scale = Vector2(1.5, 1.5)
