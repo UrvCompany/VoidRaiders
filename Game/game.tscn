@@ -10,7 +10,7 @@ size = Vector2(30, 700)
 
 [node name="background" type="Sprite2D" parent="." unique_id=1662516718]
 texture_repeat = 2
-position = Vector2(700, 350)
+position = Vector2(1172, 599)
 scale = Vector2(0.3, 0.3)
 texture = ExtResource("1_1r4le")
 region_enabled = true
