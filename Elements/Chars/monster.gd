@@ -9,6 +9,8 @@ func _physics_process(delta):
 		get_tree().call_group("enemy_group", "change_direction")
 
 func destroy():
+	Globals.change_points(1)
+	Events.enemy_died.emit()
 	queue_free()
 
 func shot():

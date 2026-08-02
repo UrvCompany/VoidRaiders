@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dpbldndaj7ceu"
-path="res://.godot/imported/aRTU1s.png-659c9fc14491ee5fd375bf3340eddd0e.ctex"
+uid="uid://cv5r4g1j6cysi"
+path="res://.godot/imported/3173551.jpg-682da6647440ae88eafc52a4076bb15d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Asserts/aRTU1s.png"
-dest_files=["res://.godot/imported/aRTU1s.png-659c9fc14491ee5fd375bf3340eddd0e.ctex"]
+source_file="res://Assets/3173551.jpg"
+dest_files=["res://.godot/imported/3173551.jpg-682da6647440ae88eafc52a4076bb15d.ctex"]
 
 [params]
 

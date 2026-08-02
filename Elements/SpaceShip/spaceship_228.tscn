@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://jo06pecjflkh"]
 
 [ext_resource type="Script" uid="uid://c5vv0tbbuj71k" path="res://Elements/SpaceShip/spaceship_228.gd" id="1_cid43"]
-[ext_resource type="Texture2D" uid="uid://kh56i0dkil37" path="res://Asserts/Spaceship_12.png" id="1_e8q67"]
+[ext_resource type="Texture2D" uid="uid://kh56i0dkil37" path="res://Assets/Spaceship_12.png" id="1_e8q67"]
 [ext_resource type="PackedScene" uid="uid://dw0wtgx8wygli" path="res://Elements/Misc_objects/Fireball.tscn" id="3_bqt0i"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_7bm3c"]

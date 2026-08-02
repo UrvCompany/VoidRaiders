@@ -25,5 +25,5 @@ func destroy():
 
 
 func take_damage():
-	print('Minus EBalo')
+	Globals.change_lives(-1)
 	

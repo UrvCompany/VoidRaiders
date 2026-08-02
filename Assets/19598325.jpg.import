@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://capni6fj5whp6"
-path="res://.godot/imported/deap_space.jpeg-ce41e462a6ec9c29a08c9c67db769ea0.ctex"
+uid="uid://b22tl5gob3aej"
+path="res://.godot/imported/19598325.jpg-57edbb2bc6db46c932b0d1ffa9dee6bc.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Asserts/deap_space.jpeg"
-dest_files=["res://.godot/imported/deap_space.jpeg-ce41e462a6ec9c29a08c9c67db769ea0.ctex"]
+source_file="res://Assets/19598325.jpg"
+dest_files=["res://.godot/imported/19598325.jpg-57edbb2bc6db46c932b0d1ffa9dee6bc.ctex"]
 
 [params]
 

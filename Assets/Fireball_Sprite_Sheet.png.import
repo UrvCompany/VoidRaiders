@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://btuq2iofrc213"
-path="res://.godot/imported/Monster4Pack.png-383c198502e3faf9442e44988f82d2f0.ctex"
+uid="uid://drjbrrk6pt5ru"
+path="res://.godot/imported/Fireball_Sprite_Sheet.png-6283232292f3f26380b878a53e561a2e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Asserts/Monster4Pack.png"
-dest_files=["res://.godot/imported/Monster4Pack.png-383c198502e3faf9442e44988f82d2f0.ctex"]
+source_file="res://Assets/Fireball_Sprite_Sheet.png"
+dest_files=["res://.godot/imported/Fireball_Sprite_Sheet.png-6283232292f3f26380b878a53e561a2e.ctex"]
 
 [params]
 

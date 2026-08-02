@@ -1,0 +1,51 @@
+[gd_scene format=3 uid="uid://b4dr3y526mts8"]
+
+[ext_resource type="Script" uid="uid://bdiao3b0tlhyj" path="res://UI/GameOver/game_over.gd" id="1_7uxnh"]
+[ext_resource type="FontFile" uid="uid://briag55nx7nni" path="res://UI/Fonts/SFProText-Light.ttf" id="1_qcjef"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_7bm3c"]
+font_size = 120
+
+[node name="GameOver" type="CanvasLayer" unique_id=38816308]
+script = ExtResource("1_7uxnh")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1506706125]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.90588236)
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=122308038]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 40
+theme_override_constants/margin_right = 40
+theme_override_constants/margin_bottom = 80
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=43881326]
+layout_mode = 2
+alignment = 1
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer" unique_id=1090317585]
+layout_mode = 2
+offset_transform_enabled = true
+theme_override_fonts/font = ExtResource("1_qcjef")
+text = "
+ОБОСРАЛСЯ
+"
+label_settings = SubResource("LabelSettings_7bm3c")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button" type="Button" parent="MarginContainer/VBoxContainer" unique_id=2048706579]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_qcjef")
+theme_override_font_sizes/font_size = 100
+text = "Retard"
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Button" to="." method="_on_button_pressed"]
