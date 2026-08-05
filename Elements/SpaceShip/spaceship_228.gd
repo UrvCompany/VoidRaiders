@@ -61,3 +61,8 @@ func take_damage():
 	sprite.visible = true
 	can_take_damage = true
 	
+	
+func collect_coin():
+	Globals.change_points(5)
+	
+	

@@ -1,6 +1,8 @@
 extends CharacterBody2D
 
 const BULLET_SCENE = preload("res://Elements/Misc_objects/enemy_bullet.tscn")
+const COIN_SCENE = preload("res://Elements/Misc_objects/coin_scene.tscn")
+
 @onready var raycast_left := $RayCast_left
 @onready var raycast_right := $RayCast_right
 
@@ -12,6 +14,14 @@ func _physics_process(delta):
 		get_tree().call_group("enemy_group", "change_direction")
 
 func destroy():
+	Globals.no_coin_count += 1
+
+	if randf() < 0.3 or Globals.no_coin_count >= 3:
+		var coin = COIN_SCENE.instantiate()
+		coin.global_position = global_position
+		get_tree().current_scene.add_child(coin)
+		Globals.no_coin_count = 0
+
 	Globals.change_points(1)
 	queue_free()
 	Events.enemy_died.emit()

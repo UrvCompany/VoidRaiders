@@ -2,6 +2,7 @@ extends Node
 
 var points := 0
 var lives := 3
+var no_coin_count := 0
 
 func change_points(diff: int):
 	points += diff
