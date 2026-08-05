@@ -22,8 +22,9 @@ func _on_lives_changed(lives: int):
 		show_game_over()
 
 func _on_enemy_died():
-	enemies_left -= 1
-	if enemies_left <= 0:
+	await get_tree().process_frame
+	print(get_tree().get_nodes_in_group("enemy").size())
+	if get_tree().get_nodes_in_group("enemy").is_empty():
 		show_victory()
 
 func show_game_over():

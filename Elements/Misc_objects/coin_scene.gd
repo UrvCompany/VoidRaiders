@@ -9,7 +9,7 @@ func _ready():
 	blink()
 	
 func blink():
-	for i in range(3):
+	for i in range(5):
 		sprite.visible = false
 		await get_tree().create_timer(0.08).timeout
 		sprite.visible = true

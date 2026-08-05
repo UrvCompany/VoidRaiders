@@ -64,7 +64,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_87m8y")
 }],
 "loop": 1,
-"name": &"default",
+"name": &"spin",
 "speed": 14.0
 }]
 
@@ -77,8 +77,8 @@ script = ExtResource("1_igqlp")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=872940852]
 sprite_frames = SubResource("SpriteFrames_7bm3c")
-autoplay = "default"
-frame_progress = 0.2569032
+animation = &"spin"
+autoplay = "spin"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=256744754]
 shape = SubResource("RectangleShape2D_0y863")
