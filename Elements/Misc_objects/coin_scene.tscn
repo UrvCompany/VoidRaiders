@@ -83,7 +83,7 @@ autoplay = "spin"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=256744754]
 shape = SubResource("RectangleShape2D_0y863")
 
-[node name="CoinSound" type="AudioStreamPlayer2D" parent="." unique_id=1860952720]
+[node name="CoinSound" type="AudioStreamPlayer2D" parent="." unique_id=900989343]
 stream = ExtResource("3_xdq8e")
 
 [node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="." unique_id=1945412995]
