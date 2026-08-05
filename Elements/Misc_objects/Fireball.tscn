@@ -32,8 +32,9 @@ animations = [{
 "speed": 8.0
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_7bm3c"]
-size = Vector2(18.5, 7.5)
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_q4j6t"]
+radius = 6.9999933
+height = 28.002958
 
 [node name="Fireball" type="CharacterBody2D" unique_id=756356069]
 top_level = true
@@ -48,8 +49,9 @@ autoplay = "default"
 frame_progress = 0.8956678
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1920770379]
-position = Vector2(0, -1)
-shape = SubResource("RectangleShape2D_7bm3c")
+position = Vector2(-2.0014932, -0.99700755)
+rotation = 1.5707964
+shape = SubResource("CapsuleShape2D_q4j6t")
 
 [node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="." unique_id=652867366]
 rect = Rect2(-15.176859, -7.6695237, 26.504175, 12.5710745)

@@ -35,7 +35,7 @@ func _physics_process(delta: float):
 	
 func shot():
 	var rocket = ROCKET_SCENE.instantiate()
-	rocket.global_position = global_position + Vector2(0, -95)
+	rocket.global_position = global_position + Vector2(0, -105)
 	shoot_sound.play()
 	add_child(rocket)
 	
@@ -55,7 +55,7 @@ func take_damage():
 	var blink_time := 0.25
 	var damage_timer := 0.0
 	
-	while damage_timer < 1.5:
+	while damage_timer < 2.5:
 		sprite.visible = !sprite.visible
 		await get_tree().create_timer(blink_time).timeout
 		damage_timer += blink_time
