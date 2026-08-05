@@ -4,6 +4,8 @@
 [ext_resource type="PackedScene" uid="uid://xq5kw3h373xs" path="res://Elements/Chars/Monster.tscn" id="2_0lypr"]
 
 [node name="EnemyGroup" type="Node2D" unique_id=906959997 groups=["enemy_group"]]
+position = Vector2(89.99999, 0)
+scale = Vector2(0.8, 0.8)
 script = ExtResource("1_yetic")
 
 [node name="Enemy" parent="." unique_id=2084012987 instance=ExtResource("2_0lypr")]
