@@ -5,10 +5,6 @@
 [ext_resource type="PackedScene" uid="uid://dw0wtgx8wygli" path="res://Elements/Misc_objects/Fireball.tscn" id="3_bqt0i"]
 [ext_resource type="AudioStream" uid="uid://d1q8jhcwjpyom" path="res://Assets/Sounds/ogon-po-khutoru-paau-edited.mp3" id="4_2ph6b"]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_us5y5"]
-radius = 230.05598
-height = 460.11197
-
 [node name="Spaceship_228" type="CharacterBody2D" unique_id=1587435101]
 rotation = 0.0060248673
 disable_mode = 2
@@ -20,11 +16,6 @@ script = ExtResource("1_cid43")
 scale = Vector2(0.3, 0.3)
 texture = ExtResource("1_e8q67")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1490568861]
-position = Vector2(-0.0060247183, -0.99998164)
-scale = Vector2(0.3, 0.3)
-shape = SubResource("CapsuleShape2D_us5y5")
-
 [node name="Fireball" parent="." unique_id=756356069 instance=ExtResource("3_bqt0i")]
 position = Vector2(2, -97)
 scale = Vector2(1.5, 1.5)
@@ -32,3 +23,6 @@ scale = Vector2(1.5, 1.5)
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=575957065]
 stream = ExtResource("4_2ph6b")
 volume_db = 15.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=332054163]
+polygon = PackedVector2Array(-77.028725, -4.5359974, -69.10719, -17.583961, -46.24016, -39.722134, -40.13182, -21.758608, -24.19236, -31.854824, -0.43981263, -72.99868, 23.812796, -31.144035, 40.872734, -21.246637, 45.758175, -40.276417, 69.902336, -16.421448, 77.97449, -4.4698644, 77.16128, 26.5356, 67.245804, 40.595592, 46.21606, 35.722206, 39.11979, 19.76467, 13.288957, 47.920807, 0.43981263, 72.99868, -25.824808, 29.156118, -69.75172, 41.420994, -77.84797, 25.469482)

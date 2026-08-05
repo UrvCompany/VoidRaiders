@@ -5,7 +5,7 @@ extends Node2D
 @onready var akvalazi_sound = $Pskov
 var enemies_left := 0
 
-const AKVALAZI = preload("res://Assets/Sounds/Аквалазы Колдунья mp3 (mp3cut.net).mp3")
+const AKVALAZI = preload("res://Assets/Sounds/akvalazi.mp3")
 const GAME_OVER_SCENE = preload("res://UI/GameOver/game_over.tscn")
 const VICTORY_SCENE = preload("res://UI/VictoryScreen/victory.tscn")
 

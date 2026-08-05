@@ -50,10 +50,10 @@ func take_damage():
 	can_take_damage = false
 	Globals.change_lives(-1)
 	
-	var blink_time := 0.15
+	var blink_time := 0.25
 	var damage_timer := 0.0
 	
-	while damage_timer < 3.0:
+	while damage_timer < 1.5:
 		sprite.visible = !sprite.visible
 		await get_tree().create_timer(blink_time).timeout
 		damage_timer += blink_time

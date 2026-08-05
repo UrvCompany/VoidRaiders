@@ -28,9 +28,8 @@ layout_mode = 2
 [node name="Label" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer" unique_id=2107631185]
 layout_mode = 2
 offset_transform_enabled = true
-offset_transform_scale = Vector2(2, 2)
-text = "0
-"
+offset_transform_scale = Vector2(3, 3)
+text = "0"
 label_settings = SubResource("LabelSettings_5sghd")
 
 [node name="Control" type="Control" parent="MarginContainer/VBoxContainer/HBoxContainer" unique_id=1751188757]

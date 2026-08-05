@@ -3,7 +3,6 @@
 [ext_resource type="Texture2D" uid="uid://dpbldndaj7ceu" path="res://Assets/aRTU1s.png" id="1_1r4le"]
 [ext_resource type="Script" uid="uid://b1nd6ketnw6mn" path="res://Game/game.gd" id="1_fwxkx"]
 [ext_resource type="PackedScene" uid="uid://jo06pecjflkh" path="res://Elements/SpaceShip/spaceship_228.tscn" id="2_7raqb"]
-[ext_resource type="Script" uid="uid://d21wxnblslmxn" path="res://Game/parallax_2d.gd" id="2_kul4i"]
 [ext_resource type="PackedScene" uid="uid://br0achrustouv" path="res://Elements/Enemy_Group/enemy_group.tscn" id="3_7raqb"]
 [ext_resource type="PackedScene" uid="uid://diofyowib0nr" path="res://UI/HUD/hud.tscn" id="4_jcm6v"]
 [ext_resource type="AudioStream" uid="uid://bwg866x8gy02y" path="res://Assets/Sounds/vazelinovoe-drislo.mp3" id="6_qmv3x"]
@@ -19,15 +18,11 @@ size = Vector2(1400, 21)
 [node name="Game" type="Node2D" unique_id=1236575319]
 script = ExtResource("1_fwxkx")
 
-[node name="Parallax2D" type="Parallax2D" parent="." unique_id=1589356954]
-repeat_size = Vector2(0, 512)
-script = ExtResource("2_kul4i")
-
-[node name="background" type="Sprite2D" parent="Parallax2D" unique_id=1662516718]
+[node name="background" type="Sprite2D" parent="." unique_id=1662516718]
 texture_filter = 3
 texture_repeat = 2
+position = Vector2(700, 350)
 texture = ExtResource("1_1r4le")
-centered = false
 region_enabled = true
 region_rect = Rect2(0, 0, 1400, 700)
 
