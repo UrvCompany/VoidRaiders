@@ -2,6 +2,7 @@ extends CharacterBody2D
 
 const ROCKET_SCENE = preload("res://Elements/Misc_objects/Fireball.tscn")
 @onready var shoot_sound = $AudioStreamPlayer2D
+@onready var hit_sound = $BolnoVnoge
 @onready var sprite = $Sprite2D
 
 const SPEED = 300.0
@@ -48,6 +49,7 @@ func take_damage():
 		return
 	
 	can_take_damage = false
+	hit_sound.play()
 	Globals.change_lives(-1)
 	
 	var blink_time := 0.25
