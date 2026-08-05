@@ -8,6 +8,7 @@ font = ExtResource("1_4g8m6")
 font_size = 120
 
 [node name="CanvasLayer_victory" type="CanvasLayer" unique_id=1881604624]
+process_mode = 2
 script = ExtResource("1_7g4h6")
 
 [node name="ColorRect_background" type="ColorRect" parent="." unique_id=222116951]

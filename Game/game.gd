@@ -27,9 +27,11 @@ func _on_enemy_died():
 		show_victory()
 
 func show_game_over():
+	get_tree().paused = true
 	shoot_sound.play()
 	add_child(GAME_OVER_SCENE.instantiate())
 
 func show_victory():
+	get_tree().paused = true
 	victory_sound.play()
 	add_child(VICTORY_SCENE.instantiate())

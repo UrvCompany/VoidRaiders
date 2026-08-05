@@ -33,6 +33,7 @@ position = Vector2(0, 350)
 shape = SubResource("RectangleShape2D_1r4le")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Wall" unique_id=960729982]
+process_mode = 2
 position = Vector2(715, 709.5)
 shape = SubResource("RectangleShape2D_7bm3c")
 

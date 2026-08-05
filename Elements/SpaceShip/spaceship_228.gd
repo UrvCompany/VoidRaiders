@@ -2,7 +2,11 @@ extends CharacterBody2D
 
 const ROCKET_SCENE = preload("res://Elements/Misc_objects/Fireball.tscn")
 @onready var shoot_sound = $AudioStreamPlayer2D
+@onready var sprite = $Sprite2D
+
 const SPEED = 300.0
+const MAX_TILT = 12.0
+const TILT_SPEED = 8.0
 
 func _physics_process(delta: float):
 	if Input.is_action_just_pressed("ui_accept"):
@@ -14,6 +18,10 @@ func _physics_process(delta: float):
 	velocity.y = direction_y * SPEED
 	
 	move_and_slide()
+	
+	var target_rotation = (velocity.x / SPEED) * deg_to_rad(MAX_TILT)
+	sprite.rotation = lerp_angle(sprite.rotation, target_rotation, TILT_SPEED * delta)
+	
 	
 func shot():
 	var rocket = ROCKET_SCENE.instantiate()
