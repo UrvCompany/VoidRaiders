@@ -28,5 +28,5 @@ func destroy():
 	
 func shot():
 	var bullet = BULLET_SCENE.instantiate()
+	get_tree().current_scene.add_child(bullet)
 	bullet.global_position += global_position + Vector2(0, 20.0)
-	add_child(bullet)
